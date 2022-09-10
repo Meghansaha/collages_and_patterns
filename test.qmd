@@ -1,0 +1,37 @@
+---
+title: "Collages and Patterns"
+subtitle: "Making art in R"
+author: "Meghan Harris, MPH"
+institute: "R-Ladies Philly"
+format:
+  revealjs: 
+    slide-number: true
+    theme: theme.scss
+    css: theme.css
+editor: visual
+title-slide-attributes: 
+  data-background-image: "grid.png"
+  data-background-size: "60%"
+  data-background-position: "right"
+  data-background-color: "#000000"
+
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
