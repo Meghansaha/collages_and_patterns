@@ -1,45 +1,150 @@
 /* CSS Themeing for slides */
 
-.reveal p {
-        text-align: center;
-        padding : 0;
-        margin : 0;
-        font-size: 80%;
+
+/*=========R Ladies-Inspired Color Palette=========*/
+
+:root {
+  --superdark-purple:#160424;
+  --dark-purple:#3c253a;
+  --medium-purple:#562457;
+  --light-purple:#fa9df2;
 }
 
-.reveal h1 {
-    text-align: center;
-    inline-size: 100%;
-    padding : 0;
-    margin : 0;
-    font-size: 60px;
-    font-weight: bold;
-    vertical-align: middle;
- line-height: 500px;
-  height: 200px;
-    
+/*=================General Slide Specs=================*/
+
+/*Link Colors*/
+.column a.link{
+  color: var(--light-purple);
 }
 
-.reveal .subtitle {
-    text-align: center;
-    inline-size: 100%;
-    padding : 0;
-    margin : 0;
-    font-size: 90%;
-    font-style: italic;
-    font-weight: bold;
-     line-height: 300px;
-  height: 200px;
+a {
+  color: var(--light-purple);
 }
 
+
+
+/* headshot frame */
+#headshot {
+  display:inline-block;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  line-height:3em;
+  border:solid 20px;
+  border-color: var(--light-purple);
+}
+
+/*==============Title Slide Specs==============*/
+
+/* Background Circle for Title Text */
 #title-slide {
-  
   width: 70%;
   height: 100%;
   border-radius: 50%;
-  background-color: #562457
-
+  background-color: var(--medium-purple);
 }
+
+/* Title Font */
+#title-slide > h1 {
+    text-align: center;
+    inline-size: 100%;
+    padding : 0;
+    margin : 0;
+    font-size: 100 px;
+    font-weight: bold;
+    vertical-align: middle;
+    line-height: 800px;
+    height: 200px;
+}
+
+/* Subtitle specs */
+#title-slide > p.subtitle {
+    text-align: center;
+    inline-size: 100%;
+    padding : 0;
+    margin : 0;
+    font-size: 80px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 700px;
+    height: 200px;
+}
+
+/* Title paragraph specs */
+#title-slide > p {
+    text-align: center;
+    padding : 0;
+    margin : 0;
+    font-size: 100px%;
+    line-height: 650px;
+    height: 80px;
+}
+
+/*==============Dark Slide Specs==============*/
+
+/* slide text area background color */
+.dark {
+  background-color: var(--medium-purple);
+  height: 800px;
+  margin-top: 50px;
+}
+
+.dark h1 {
+  background-color: var(--superdark-purple);
+  display: inline-block;
+  padding: 15px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 3px;
+  border-color: var(--light-purple);
+}
+
+/* Progress Bar Specs */
+body > div.reveal.focused.has-horizontal-slides.ready.fade.has-dark-background > div.backgrounds {
+  background-color: var(--medium-purple);
+} 
+
+body > div.reveal.focused.has-horizontal-slides.ready.fade.has-dark-background > div.progress {
+  color: var(--light-purple);
+  height: 5px;
+  margin-bottom: 4.5px;
+}
+
+/*==============Light Slide Specs==============*/
+
+/* slide text area background color */
+.light {
+  background-color: var(--light-purple);
+  height: 800px;
+  margin-top: 50px;
+}
+
+.light h1 {
+  background-color: var(--medium-purple);
+  color:#fff;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 3px;
+  border-color: var(--superdark-purple);
+}
+
+/* Progress Bar Specs */
+body > div.reveal.focused.has-horizontal-slides.ready.fade.has-light-background > div.backgrounds {
+  background-color: var(--light-purple);
+}
+
+body > div.reveal.focused.has-horizontal-slides.ready.fade.has-light-background > div.progress {
+  color: var(--medium-purple);
+  height: 5px;
+  margin-bottom: 4.5px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
