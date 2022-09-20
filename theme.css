@@ -17,8 +17,169 @@
   color: var(--light-purple);
 }
 
-a {
+#tabby-toggle_tabset-1-1 {
+  color: var(--superdark-purple);
+}
+
+#tabby-toggle_tabset-1-2 {
+  color: var(--superdark-purple);
+}
+
+#tabby-toggle_tabset-1-3 {
+  color: var(--superdark-purple);
+}
+
+#tabset-1-1 > p > a{
+  color: var(--superdark-purple);
+  text-decoration: underline;
+  
+}
+#tabset-1-2 > p > a{
+  color: var(--superdark-purple);
+  text-decoration: underline;
+}
+#tabset-1-3 > p > a{
+  color: var(--superdark-purple);
+  text-decoration: underline;
+}
+
+#tabby-toggle_tabset-2-1 > strong > code{
+  color: var(--superdark-purple);
+}
+
+#tabby-toggle_tabset-2-2 > strong > code{
+  color: var(--superdark-purple);
+}
+
+#tabby-toggle_tabset-2-3 > strong > code{
+  color: var(--superdark-purple);
+}
+
+#tabby-toggle_tabset-2-4 > strong > code{
+  color: var(--superdark-purple);
+}
+
+#tabby-toggle_tabset-3-1 {
+  color: var(--superdark-purple);
+}
+
+#tabby-toggle_tabset-3-2 {
+  color: var(--superdark-purple);
+}
+
+#tabby-toggle_tabset-3-3 {
+  color: var(--superdark-purple);
+}
+
+#tabby-toggle_tabset-3-4 {
+  color: var(--superdark-purple);
+}
+
+#tabset-3-1 > p > a{
+  color: var(--superdark-purple);
+  text-decoration: underline;
+  
+}
+#tabset-3-2 > p > a{
+  color: var(--superdark-purple);
+  text-decoration: underline;
+}
+#tabset-3-3 > p > a{
+  color: var(--superdark-purple);
+  text-decoration: underline;
+}
+
+#tabset-3-4 > p > a{
+  color: var(--superdark-purple);
+  text-decoration: underline;
+}
+
+#tabby-toggle_tabset-4-1 {
   color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-4-2 {
+  color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-4-3 {
+  color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-4-4 {
+  color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-4-5 {
+  color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-4-6 {
+  color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-5-1 {
+  color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-5-2 {
+  color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-5-3 {
+  color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-5-4 {
+  color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-5-5 {
+  color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-5-6 {
+  color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-6-1 {
+  color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-6-2 {
+  color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-6-3 {
+  color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-6-4 {
+  color: var(--light-purple);
+}
+
+#tabby-toggle_tabset-6-5 {
+  color: var(--light-purple);
+}
+
+
+sup {
+  visibility:hidden;
+  }
+
+q {
+  font-size: 70px;
+}
+
+div .quote{
+  text-align: center;
+  margin-top: 10%
+  
+}
+
+a{
+  font-size: 30 px;
+  color: var(--dark-purple);
 }
 
 
@@ -89,8 +250,9 @@ a {
 
 .dark h1 {
   background-color: var(--superdark-purple);
+  font-size: 80px;
   display: inline-block;
-  padding: 15px;
+  padding: 2px;
   border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
   border:solid 3px;
   border-color: var(--light-purple);
@@ -118,9 +280,10 @@ body > div.reveal.focused.has-horizontal-slides.ready.fade.has-dark-background >
 
 .light h1 {
   background-color: var(--medium-purple);
+  font-size: 80px;
   color:#fff;
   display: inline-block;
-  padding: 15px;
+  padding: 2px;
   border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
   border:solid 3px;
   border-color: var(--superdark-purple);
@@ -135,6 +298,26 @@ body > div.reveal.focused.has-horizontal-slides.ready.fade.has-light-background 
   color: var(--medium-purple);
   height: 5px;
   margin-bottom: 4.5px;
+}
+
+/*==============Transition Slide Specs==============*/
+
+/* slide text area background color */
+
+.trans h1 {
+  background-color: #000000;
+  color:#ffffff;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 3px;
+  border-color: var(--superdark-purple);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.85;
 }
 
 

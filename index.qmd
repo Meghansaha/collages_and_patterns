@@ -1,0 +1,1300 @@
+---
+title: "Collages and Patterns"
+subtitle: "Making art in R"
+author: "Meghan Harris, MPH"
+institute: "R-Ladies Philly"
+date: "October 12th 2022 | 2022-10-12"
+format:
+  revealjs: 
+    slide-number: true
+    theme: theme.scss
+    css: theme.css
+    width: 1690
+    height: 1080
+    linkcolor: "#ad58c4"
+    highlight-style: github
+    code-copy: true
+    code-overflow: wrap
+    transition: fade
+editor: visual
+title-slide-attributes: 
+  data-background-image: "images/grid.png"
+  data-background-size: "60%"
+  data-background-position: "right"
+  data-background-color: "#000000"
+type: website
+output-dir: docs
+---
+
+## <sup>About Me</sup> {.dark background-color="#562457"}
+
+<h1>About Me</h1>
+
+::: columns
+::: {.column width="60%"}
+-   I'm Meghan Harris 👋🏾
+-   Data Scientist 💻
+-   Prostate Cancer Clinical Trials Consortium (PCCTC) - Memorial Sloan Kettering ⚛️
+-   <a href="https://thetidytrekker.com" class="link">thetidytrekker.com</a> 🌐
+-   <a href="https://twitter.com/meghansharris" class="link">@meghansharris</a> ![](images/icons/twitter.png){width="40"}
+-   <a href="https://www.linkedin.com/in/meghan-harris/" class="link">meghan-harris</a> ![](images/icons/linkedin.png){width="35" height="35"}
+-   I like making generative aRt in R (Rtistry) 🎨 - That's why we're here!
+:::
+
+::: {.column width="40%"}
+![](images/headshot.jpg){#headshot}
+:::
+:::
+
+## <sup>What Are We Doing Today?</sup> {.light background-color="#fa9df2"}
+
+<h1 style="color:white;">
+
+What Are We Doing Today?
+
+</h1>
+
+::: incremental
+-   <h2>What is Rtistry and What's the Point?</h2>
+
+    <br>
+
+-   <h2>Minding Your Toolbox</h2>
+
+    <br>
+
+-   <h2>Making Data for Patterns</h2>
+
+    <br>
+
+-   <h2>Making Data for Collages</h2>
+
+    <br>
+
+-   <h2>Putting it to Practice (Live Code)</h2>
+:::
+
+##  {.trans background-color="#000000" background-image="images/trans_1.png" background-size="80%"}
+
+<center>
+
+<h1 style="color:white;">
+
+What is Rtistry<br> &<br>What's the point?
+
+</h1>
+
+</center>
+
+## <sup>What is Rtistry?</sup> {.dark background-color="#562457"}
+
+<h1>What is Rtistry?</h1>
+
+<br><br><br>
+
+<center><q>Pieces of art created with code in the R programming language.</q></center>
+
+## <sup>Generative/Random Art Examples</sup> {.dark background-color="#562457"}
+
+<h1>What is Rtistry?</h1>
+
+<br><br>
+
+<center><q>These pieces can be generated randomly...</q></center>
+
+::: columns
+::: {.column width="50%"}
+<center>![](images/examples/ex_1.jpg){style="border: 5px solid #000000" width="800" height="500"}</center>
+:::
+
+::: {.column width="50%"}
+<center>![](images/examples/ex_2.jpg){style="border: 5px solid #000000" width="800" height="500"}</center>
+:::
+:::
+
+## <sup>Calculated/Manual Examples</sup> {.dark background-color="#562457"}
+
+<h1>What is Rtistry?</h1>
+
+<br><br>
+
+<center><q>...or intentionally calculated</q></center>
+
+::: columns
+::: {.column width="50%"}
+<center>![](images/examples/ex_3.jpg){style="border: 5px solid #000000" width="800" height="500"}</center>
+:::
+
+::: {.column width="50%"}
+<center>![](images/examples/ex_4.jpg){style="border: 5px solid #000000" width="800" height="500"}</center>
+:::
+:::
+
+## <sup>What is the Point of Rtistry?</sup> {.dark background-color="#562457"}
+
+<h1>What's the Point of Rtistry?</h1>
+
+<br><br>
+
+<center>![](images/fun.gif){style="border: 5px solid #000000" width="950" height="600"}</center>
+
+## <sup>Benefits of Rtistry</sup> {.dark background-color="#562457"}
+
+<h1>What's the Point of Rtistry?</h1>
+
+<br><br><br>
+
+-   It's fun
+-   It can be therapeutic
+-   It can help you become a better R programmer
+-   It ***might*** help you learn more about math
+
+## <sup>Don't be So Serious...Relax</sup> {.dark background-color="#562457"}
+
+<h1>What's the Point of Rtistry?</h1>
+
+<center>![](images/relax.gif){style="border: 5px solid #000000" width="750" height="750"}</center>
+
+##  {.trans background-color="#000000" background-image="images/trans_2.png" background-size="80%"}
+
+<center>
+
+<h1 style="color:white;">
+
+Minding Your Toolbox
+
+</h1>
+
+</center>
+
+## <sup>Minding Your Toolbox</sup> {.light background-color="#fa9df2"}
+
+<h1 style="color:white;">
+
+Minding Your Toolbox
+
+</h1>
+
+<br>
+
+<q>You **don't** need to be a programming genius or computational scientist to create Rtistry, but sometimes it helps to think about your toolbox before you start creating pieces.</q>
+
+## <sup>Your Tools Can Vary</sup> {.light background-color="#fa9df2"}
+
+<h1 style="color:white;">
+
+Minding Your Toolbox
+
+</h1>
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+<h3><br>Just like some preparation and tools may be needed to make physical pieces of art like oil paintings and watercolors, those wanting to make rtistry might need to make some decisions about what tools to use as well.</h3>
+:::
+
+::: {.column width="50%"}
+<center>![](images/art.gif){style="border: 5px solid #000000" width="600" height="600"}</center>
+:::
+:::
+
+## <sup>Tool Inspiration - Colors</sup> {.light background-color="#fa9df2"}
+
+<h1 style="color:white;">
+
+Minding Your Toolbox
+
+</h1>
+
+<h3>
+
+-   Colors and Palettes
+
+</h3>
+
+<center>
+
+::: panel-tabset
+## **External Color Pickers**
+
+<br> [**Google Color Picker**](https://g.co/kgs/iwakbc)
+
+[**colorhunt.co**](https://colorhunt.co/)
+
+[**colormind.io**](http://colormind.io/)
+
+[**colorkit.co**](https://colorkit.co/)
+
+## **R Packages**
+
+<br> [**RColorBrewer**](https://r-graph-gallery.com/38-rcolorbrewers-palettes.html)
+
+[**MetBrewer**](https://github.com/BlakeRMills/MetBrewer)
+
+[**Paletter**](https://github.com/AndreaCirilloAC/paletter)
+
+[**PrettyCols**](https://nrennie.rbind.io/blog/2022-09-02-introducing-prettycols/)
+
+## **Make Your Own**
+
+<br>
+
+[**grDevices**](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/00Index.html) Functions (like [`colorRampPalette()`](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/colorRamp.html))
+
+**Custom Palettes**
+
+**Creating Functions**
+:::
+
+</center>
+
+## <sup>Tool Inspiration - Geoms</sup> {.light background-color="#fa9df2"}
+
+<h1 style="color:white;">
+
+Minding Your Toolbox
+
+</h1>
+
+<h3>
+
+-   Paintbrushes, Pens, etc. AKA Geoms
+
+</h3>
+
+::: panel-tabset
+## **`geom_point()`**
+
+::: {layout="[[50,50]]"}
+### 
+
+```{r point_ex, echo = TRUE, fig.show='hide'}
+
+# Library Load-in===
+library(ggplot2)
+
+#Generate a grid===
+points <- data.frame(x = seq(0,5, by = .5),
+                     y = seq(0,5, by = .5))
+
+grid_points <- expand.grid(points)
+
+#Create the ggplot===
+grid_points |>
+  ggplot(aes(x,y))+
+  geom_point(shape = 22, 
+             color = "black", 
+             fill = "purple",
+             size = 10, 
+             stroke = 3)+
+  geom_point(color = "white")
+
+```
+
+### 
+
+```{r point_plot, echo = FALSE}
+
+grid_points |>
+  ggplot(aes(x,y))+
+  geom_point(shape = 22, 
+             color = "black", 
+             fill = "purple",
+             size = 10, 
+             stroke = 3)+
+  geom_point(color = "white")
+
+```
+:::
+
+## **`geom_segment()`**
+
+::: {layout="[[50,50]]"}
+### 
+
+```{r segment_ex, echo = TRUE, fig.show='hide'}
+
+# Library Load-in===
+library(ggplot2)
+
+#Calculate data for lines===
+vert_lines <- data.frame(x = seq(0,5, by = .1),
+                         xend = seq(0,5, by = .1),
+                         y = 0,
+                         yend = 5)
+
+pretty_colors <- c("#4CACBC", "#6CC4A1", "#A0D995", "#F6E3C5")
+
+pretty_pal <- colorRampPalette(pretty_colors)(nrow(vert_lines))
+
+#Create the ggplot===
+vert_lines |>
+  ggplot(aes(x,y, xend = xend, yend = yend))+
+  geom_segment(color = pretty_pal, size = 10)
+
+```
+
+### 
+
+```{r segment_plot, echo = FALSE}
+
+vert_lines |>
+  ggplot(aes(x,y, xend = xend, yend = yend))+
+  geom_segment(color = pretty_pal, size = 10)
+```
+:::
+
+## **`geom_path()`**
+
+::: {layout="[[50,50]]"}
+### 
+
+```{r path_ex, echo = TRUE, fig.show='hide'}
+#Library Load-in===
+library(ggplot2)
+library(dplyr)
+library(purrr)
+
+#Generate angles===
+angles <- seq(0,2*pi, length.out = 1000)
+
+#Make a starter circle===
+circle <- data.frame(x = cos(angles),
+                     y = sin(angles))
+
+#Set how many circles/iterations we want
+iterations <- 1:10
+
+#Make the final data set===
+spirals <- map_df(iterations, ~circle %>%
+                                 mutate(x = x*.x,
+                                        y = y*.x,
+                                        group = .x))
+
+#Create the ggplot===
+spirals |>
+  ggplot(aes(x,y, group = group))+
+  geom_path(size = 5)+
+  coord_equal()
+
+```
+
+### 
+
+```{r path_plot, echo = FALSE}
+spirals |>
+  ggplot(aes(x,y, group = group))+
+  geom_path(size = 5)+
+  coord_equal()
+```
+:::
+
+## **`geom_polygon()`**
+
+::: {layout-ncol="2"}
+### 
+
+```{r polygon_ex, echo = TRUE, fig.show='hide'}
+
+# Library Load-in===
+library(ggplot2)
+
+#Angle generation===
+angle <- seq(0, 2*pi, length.out = 1000)
+
+#Petal Length===
+petal_length <- seq(1,10, length.out = 100)
+
+#Dataframe for ggplot===
+flower <- data.frame(x = cos(angle)*petal_length,
+                     y = sin(angle)*petal_length)
+
+#Create the ggplot===
+flower |>
+  ggplot(aes(x,y))+
+  geom_polygon()+
+  coord_equal()
+
+
+```
+
+### 
+
+```{r polygon_plot, echo = FALSE}
+
+flower |>
+  ggplot(aes(x,y))+
+  geom_polygon()+
+  coord_equal()
+
+```
+:::
+:::
+
+## <sup>Tool Inspiration - Supporting Information</sup> {.light background-color="#fa9df2"}
+
+<h1 style="color:white;">
+
+Minding Your Toolbox
+
+</h1>
+
+<h3>
+
+-   Supporting Information
+
+</h3>
+
+<center>
+
+::: panel-tabset
+## **ggplot2**
+
+💡 Knowing your way around the `ggplot2` package can be super helpful:
+
+<br>
+
+[**Intro to Rtistry Blog Post**](https://www.thetidytrekker.com/post/thinking-outside-the-grid)
+
+[**ggplot2 Book**](https://ggplot2-book.org/)
+
+[**ggplot2 References**](https://ggplot2.tidyverse.org/reference/index.html)
+
+## **Sequences and Samples**
+
+💡 Creating sequences, samples, and distributions in R is useful: <br><br> **Sequencing Functions:** [**rep()**](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/rep), [**seq()**](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/seq), [**rep_along()**](https://rlang.r-lib.org/reference/rep_along.html)
+
+**Distribution Functions:** [**runif()**](https://www.rdocumentation.org/packages/compositions/versions/2.0-2/topics/runif), [**dnorm() & rnorm()**](https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Normal)
+
+**Sampling Functions:** [**sample()**](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sample), [**slice_sample**](https://dplyr.tidyverse.org/reference/slice.html)
+
+## **Math/Trigonometry**
+
+💡 Knowing how to use trig functions in R and understanding how to plot trig equations in ggplot may be helpful: <br><br>
+
+**Trigonometric Functions:** [**cospi(),cos(),sin(), etc.**](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/Trig)
+
+**Non-parametric vs. parametric equations/coordinates**
+
+**Using packages that exist to make your life easier, like** [**ggforce**](https://ggforce.data-imaginist.com/reference/index.html)
+
+**Using workshops that exist to make your life easier, like** [**Art From Code**](https://art-from-code.netlify.app/)
+
+## **Data to Visual**
+
+💡 Playing around with code and/or having a desired output can help to bridge the connection from data to visual: <br><br>
+
+[**Ijemaka's Anatomy of Generative Art**](https://github.com/Ijeamakaanyene/anatomy_of_generative_art/blob/main/Anatomy%20of%20Generative%20Art.pdf)
+
+[**Danielle's Art From Code**](https://art-from-code.netlify.app/)
+
+[**Recreation Thursday Project**](https://github.com/sharlagelfand/RecreationThursday)
+:::
+
+</center>
+
+##  {.trans background-color="#000000" background-image="images/trans_3.png" background-size="80%"}
+
+<center>
+
+<h1 style="color:white;">
+
+Making Data For Patterns
+
+</h1>
+
+</center>
+
+## <sup>Making Data for Patterns - Understanding the Basics</sup> {.dark background-color="#562457"}
+
+<h1 style="color:white;">
+
+Making Data for Patterns
+
+</h1>
+
+<br> 💡 No matter what your logical process is to creating rtistry, the most important aspect in the process is **the data**
+
+<br><br>
+
+::: fragment
+<center><q>How do we go from datasets with numbers and strings to rtistry?</q></center>
+:::
+
+## <sup>Making Data for Patterns - What is a pattern?</sup> {.dark background-color="#562457"}
+
+<h1 style="color:white;">
+
+Making Data for Patterns
+
+</h1>
+
+<br>
+
+<h2>What is a Pattern?</h2>
+
+<br>
+
+::: fragment
+<center>
+
+<h3>Def. <sub>(Oxford)</sub>: ***A repeated decorative design.***</h3>
+
+</center>
+:::
+
+::: fragment
+<center>![](images/examples/pattern_ex.png)</center>
+:::
+
+## <sup>Patterns - Polka Dots Example - First Look</sup> {.dark background-color="#562457"}
+
+<h1 style="color:white;">
+
+Making Data for Patterns
+
+</h1>
+
+::: columns
+::: {.column width="50%"}
+![](images/examples/patterns_ex1.png){style="border: 5px solid #000000" width="600" height="600"}
+:::
+
+::: {.column width="50%"}
+<h3>🔎 Observations we can make:</h3>
+
+<br>
+
+::: incremental
+-   There's dots (points)
+-   There's an order to how the dots are displayed
+-   The dots are white
+-   The background is green ( *#598C4C to be exact* )
+:::
+:::
+:::
+
+## <sup>Patterns - Polka Dots Example - Step by Step</sup> {.dark background-color="#562457"}
+
+<h1 style="color:white;">
+
+Making Data for Patterns
+
+</h1>
+
+::: panel-tabset
+## Libraries and Blank Canvas
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r polka_ex1, echo = TRUE, fig.show='hide'}
+
+# "01_patterns_ex.R" in the example_scripts folder#
+
+#Library Load-in#
+library(ggplot2) #For making the piece w/ ggplot
+library(dplyr) #For data wrangling
+library(tibble) #To work with tibbles
+
+#Setting the axes limits for X and Y#
+axis_min <- 0
+axis_max <- 10
+
+#Creating a "base" data frame to feed into ggplot#
+base_data <- tibble(x = axis_min:axis_max,
+                    y = x)
+
+#Plotting the "blank" canvas#
+base_data |>
+  ggplot(aes(x,y))
+
+```
+
+### 
+
+::: fragment
+<br>
+
+```{r polka_plot1, echo = FALSE}
+
+base_data |>
+  ggplot(aes(x,y))
+
+```
+:::
+:::
+
+## The Goal and The Blank Canvas</sup>
+
+::: {layout="[[40,60]]"}
+### 
+
+![](images/examples/patterns_ex1.png){style="border: 5px solid #000000" height="500"}
+
+### 
+
+```{r polka_plot1b, echo = FALSE}
+
+base_data |>
+  ggplot(aes(x,y))
+
+```
+:::
+
+</center>
+
+## Viewing The Base Data
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r polka_ex2, echo = TRUE, fig.show='hide'}
+
+#Looking at the base_data frame points on the canvas#
+
+base_data |>
+  ggplot(aes(x,y))+
+  geom_point()
+
+```
+
+### 
+
+::: fragment
+```{r polka_plot2, echo = FALSE}
+
+base_data |>
+  ggplot(aes(x,y))+
+  geom_point()
+
+```
+:::
+:::
+
+## Making a Grid
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r polka_ex3, echo = TRUE, fig.show='hide'}
+
+#1) Make a grid of points#
+
+#Creates all combos of #s in the frame#
+grid_points <- expand.grid(base_data) 
+
+#View the new dataset on the canvas#
+grid_points |>
+  ggplot(aes(x,y))+
+  geom_point()
+
+```
+
+### 
+
+::: fragment
+```{r polka_plot3, echo = FALSE}
+
+grid_points |>
+  ggplot(aes(x,y))+
+  geom_point()
+
+```
+:::
+:::
+
+## Spacing Variations
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r polka_ex4, echo = TRUE, fig.show='hide'}
+
+#2) Add spacing variations#
+
+#Make a new "polka dot" set without the "dropped" values#
+polka_dots <- grid_points |>
+  mutate(x = case_when(y %% 2 == 0 & x %% 2 > 0 ~ NA_integer_,
+                       TRUE ~ x),
+         y = case_when(x %% 2 == 0 & y %% 2 > 0 ~ NA_integer_,
+                       TRUE ~ y)) |>
+  filter(if_all(everything(), ~!is.na(.))) #Removes all rows with an NA#
+
+#View the new dataset on the canvas#
+polka_dots |>
+  ggplot(aes(x,y))+
+  geom_point()
+
+```
+
+### 
+
+::: fragment
+```{r polka_plot4, echo = FALSE}
+
+polka_dots |>
+  ggplot(aes(x,y))+
+  geom_point()
+
+```
+:::
+:::
+
+## Tweaking the Aesthetics
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r polka_ex5, echo = TRUE, fig.show='hide'}
+
+#3) Add final aesthetic options to make it pretty
+
+#Setting options for the image#
+dot_size <- 10
+dot_color <- "#ffffff" #"white" works too
+background_color <- "#598C4C"
+
+#Plotting the final image - while feeding in the options#
+polka_dots |>
+  ggplot(aes(x,y))+
+  theme_void()+ #Removes axes, labels, etc.
+  geom_point(size = dot_size, 
+             color = dot_color)+
+  theme(plot.background = element_rect(fill = background_color))
+
+```
+
+### 
+
+::: fragment
+```{r polka_plot5, echo = FALSE}
+
+polka_dots |>
+  ggplot(aes(x,y))+
+  theme_void()+ #Removes axes, labels, etc.
+  geom_point(size = dot_size, 
+             color = dot_color)+
+  theme(plot.background = element_rect(fill = background_color))
+
+```
+:::
+:::
+:::
+
+## <sup>Patterns - Chevron Example - First Look</sup> {.dark background-color="#562457"}
+
+<h1 style="color:white;">
+
+Making Data for Patterns
+
+</h1>
+
+::: columns
+::: {.column width="50%"}
+![](images/examples/patterns_ex2.png){style="border: 5px solid #000000" width="600" height="600"}
+:::
+
+::: {.column width="50%"}
+<h3>🔎 Observations we can make:</h3>
+
+<br>
+
+::: incremental
+-   There's wide, "zig-zagged" lines (paths)
+-   It's the same line but copied and "shifted up" the plot
+-   There's six lines with six distinct colors ( *#c89658*, *#b6886f*, *#8867ab*, *#bbaa5f*, *#9fab7c*, and *#5aabc4* )
+-   The background is yellow ( *#E3A934 to be exact* )
+:::
+:::
+:::
+
+## <sup>Patterns - Chevron Example - Step by Step</sup> {.dark background-color="#562457"}
+
+<h1 style="color:white;">
+
+Making Data for Patterns
+
+</h1>
+
+::: panel-tabset
+## Libraries and Base Data
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r chevron_ex1, echo = TRUE, fig.show='hide'}
+
+# "02_patterns_ex.R" in the example_scripts folder#
+
+#Library Load-in#
+#library(ggplot2) #For making the piece w/ ggplot
+#library(dplyr) #For data wrangling
+#library(tibble) #To work with tibbles
+library(purrr) #For iteration work
+
+#Setting the axes limits for X and Y#
+axis_min <- 0
+axis_max <- 10
+
+#Creating a "base" data frame#
+base_data <- tibble(x = axis_min:axis_max,
+                    y = axis_min)
+
+#Plotting the base_data canvas#
+base_data |>
+  ggplot(aes(x,y))+
+  geom_point()+
+  geom_path()
+
+```
+
+### 
+
+::: fragment
+<br>
+
+```{r chevron_plot1, echo = FALSE}
+
+base_data |>
+  ggplot(aes(x,y))+
+  geom_point()+
+  geom_path()
+
+```
+:::
+:::
+
+## The Goal and The Base Data</sup>
+
+::: {layout="[[40,60]]"}
+### 
+
+![](images/examples/patterns_ex2.png){style="border: 5px solid #000000" height="500"}
+
+### 
+
+```{r chevron_plot1b, echo = FALSE}
+
+base_data |>
+  ggplot(aes(x,y))+
+  geom_point()+
+  geom_path()
+
+```
+:::
+
+</center>
+
+## "Bumping" Up the Points
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r chevron_ex3, echo = TRUE, fig.show='hide'}
+
+#1) "Bump" up every other point#
+
+#Creating a vector of "bumps"#
+bumps <- rep_along(1:nrow(base_data), c(0,1))
+
+#Mutating the base_data frame to add the "bumps"#
+zigs <- base_data |>
+          mutate(y = y + bumps)
+
+#Viewing the zigs frame#
+zigs |>
+  ggplot(aes(x,y))+
+  geom_path()
+
+```
+
+### 
+
+::: fragment
+```{r chevron_plot3, echo = FALSE}
+
+zigs |>
+  ggplot(aes(x,y))+
+  geom_path()
+
+```
+:::
+:::
+
+## Iterating Up the Plot
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r chevron_ex4, echo = TRUE, fig.show='hide'}
+
+#2) Copy and Paste the same line up the plot#
+
+#Setting up the number of iterations and "shifts" up the plot#
+n <- 1:6
+
+#Creating a new dataframe with "copied and shifted" lines#
+#n value is added to each y value 6 times#
+zigzags <- map_df(n, ~ zigs |>
+                        mutate(y = y + .x)) 
+
+#Viewing the zigzags frame#
+zigzags |>
+  ggplot(aes(x,y))+
+  geom_path()
+
+```
+
+### 
+
+::: fragment
+```{r chevron_plot4, echo = FALSE}
+
+zigzags |>
+  ggplot(aes(x,y))+
+  geom_path()
+
+```
+:::
+:::
+
+## Grouping is Key
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r chevron_ex4b, echo = TRUE, fig.show='hide'}
+
+#2) Copy and Paste the same line up the plot#
+
+#Setting up the number of iterations and "shifts" up the plot#
+n <- 1:6
+
+#Creating a new dataframe with "copied and shifted" lines#
+#n value is added to each y value 6 times#
+#group value create a string to keep each "line" together#
+zigzags <- map_df(n, ~ zigs |>
+                        mutate(y = y + .x,
+                               group = paste0("line",.x))) 
+
+#Viewing the zigzags frame#
+zigzags |>
+  ggplot(aes(x,y, group = group))+
+  geom_path()
+
+```
+
+### 
+
+::: fragment
+```{r chevron_plot4b, echo = FALSE}
+
+zigzags |>
+  ggplot(aes(x,y, group = group))+
+  geom_path()
+
+```
+:::
+:::
+
+## Tweaking the Aesthetics
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r chevron_ex5, echo = TRUE, fig.show='hide'}
+
+#3) Add final aesthetic options to make it pretty
+
+#Setting options for the image#
+line_size <- 10
+line_colors <- c("#c89658", "#b6886f", "#8867ab", 
+                 "#bbaa5f", "#9fab7c", "#5aabc4")
+background_color <- "#E3A934"
+
+#Re-do the iterations - map colors into the dataset - it's easier#
+zigzag_colored <- map2_df(n, line_colors, ~ zigs |>
+                                             mutate(y = y + .x,
+                                                    group = paste0("line",.x),
+                                                    color = .y)) 
+
+#Plotting the final image - while feeding in the options#
+zigzag_colored |>
+  ggplot(aes(x,y, group = group))+
+  theme_void()+ #Removes axes, labels, etc.
+  geom_path(size = line_size, 
+            lineend = "square",
+            linejoin = "mitre",
+            color = zigzag_colored$color)+
+  theme(plot.background = element_rect(fill = background_color))
+
+```
+
+### 
+
+::: fragment
+```{r chevron_plot5, echo = FALSE}
+
+zigzag_colored |>
+  ggplot(aes(x,y, group = group))+
+  theme_void()+ #Removes axes, labels, etc.
+  geom_path(size = line_size, 
+            lineend = "square",
+            linejoin = "mitre",
+            color = zigzag_colored$color)+
+  theme(plot.background = element_rect(fill = background_color))
+
+```
+:::
+:::
+:::
+
+## <sup>Patterns - Rainbow Wheel Example - First Look</sup> {.dark background-color="#562457"}
+
+<h1 style="color:white;">
+
+Making Data for Patterns
+
+</h1>
+
+::: columns
+::: {.column width="50%"}
+![](images/examples/patterns_ex3.png){style="border: 5px solid #000000" width="600" height="600"}
+:::
+
+::: {.column width="50%"}
+<h3>🔎 Observations we can make:</h3>
+
+<br>
+
+::: incremental
+-   This looks fancy, but we can use some illusions to make this
+-   It's really just one circle, just copied 20 times
+-   There's twenty distinct colors on a rainbow spectrum
+-   Each circle has a white, dashed border around it
+-   The background is black
+:::
+:::
+:::
+
+## <sup>Patterns - Rainbow Wheel Example - Step by Step</sup> {.dark background-color="#562457"}
+
+<h1 style="color:white;">
+
+Making Data for Patterns
+
+</h1>
+
+::: panel-tabset
+## More Complicated Base Data
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r rainbow_ex1, echo = TRUE, fig.show='hide'}
+
+# "03_patterns_ex.R" in the example_scripts folder#
+
+#Library Load-in#
+#library(ggplot2) #For making the piece w/ ggplot
+#library(dplyr) #For data wrangling
+#library(tibble) #To work with tibbles
+#library(purrr) #For iteration work
+
+#1) Calculate data for a circle from scratch#
+
+#Make a vector with angles for the circle#
+angles <- seq(0, 2*pi, length.out = 100)
+
+#Make the full circle with "converted" equations# 
+circle <- tibble(x = cos(angles),
+                 y = sin(angles))
+
+#View the base_circle plot#
+circle |>
+  ggplot(aes(x,y))+
+  geom_path()+
+  coord_equal()
+
+```
+
+### 
+
+::: fragment
+<br>
+
+```{r rainbow_plot1, echo = FALSE}
+
+circle |>
+  ggplot(aes(x,y))+
+  geom_path()+
+  coord_equal()
+
+```
+:::
+:::
+
+## The Goal and The Base Data</sup>
+
+<center>
+
+::: {layout="[[40,60]]"}
+### 
+
+![](images/examples/patterns_ex3.png){style="border: 5px solid #000000" width="500"}
+
+### 
+
+```{r rainbow_plot1b, echo = FALSE}
+
+circle |>
+  ggplot(aes(x,y))+
+  geom_polygon()+
+  coord_equal()
+
+```
+:::
+
+</center>
+
+## Iterating the Data Set
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r rainbow_ex3, echo = TRUE, fig.show='hide'}
+
+#2) Iterate the circle to copy and shift in a row#
+
+#Number of circles we want in total#
+n = 20
+
+#Setting up the spectrum of colors we want to use#
+rainbow_pal <-  c("#af3918", "#a21152", "#822b75", 
+                  "#612884","#154baf","#0b82b9", 
+                  "#277e9d", "#488e35","#e3a934","#b2336a")
+
+#Expanding this spectrum to match the number of circles we want#
+final_pal <- colorRampPalette(rainbow_pal)(n)
+
+#Creating a data frame with circles, colors, and group variables#
+circle_row <- map2_df(1:n,final_pal, ~circle |>
+                       mutate(x = x + .x,
+                              color = .y,
+                              group = paste0("group",.x)))
+
+#View the data as-is#
+circle_row |>
+  ggplot(aes(x,y, group = group))+
+  geom_polygon()
+
+```
+
+### 
+
+::: fragment
+```{r rainbow_plot3, echo = FALSE}
+
+circle_row |>
+  ggplot(aes(x,y, group = group))+
+  geom_polygon()
+
+```
+:::
+:::
+
+## Tweak the Aesthetics
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r rainbow_ex4, echo = TRUE, fig.show='hide'}
+
+#3) Add final aesthetic options to make it pretty
+
+#Setting options for the image#
+line_style <- 2
+line_color <- "#ffffff"
+background_color <- "#000000"
+
+#Plotting the final image while feeding in options#
+#Fill variable gets the colors from the dataset#
+circle_row |>
+  ggplot(aes(x,y, group = group))+
+  theme_void()+
+  geom_polygon(fill = circle_row$color, 
+               color = line_color, 
+               linetype = line_style)+
+  theme(plot.background = element_rect(fill = background_color))
+
+```
+
+### 
+
+::: fragment
+```{r rainbow_plot4, echo = FALSE}
+
+circle_row |>
+  ggplot(aes(x,y, group = group))+
+  theme_void()+
+  geom_polygon(fill = circle_row$color, color = line_color, linetype = line_style)+
+  theme(plot.background = element_rect(fill = background_color))
+
+```
+:::
+:::
+
+## Finesse the ggplot
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r rainbow_ex4b, echo = TRUE, fig.show='hide'}
+
+#3) Add final aesthetic options to make it pretty#
+
+#Setting options for the image#
+line_style <- 2
+line_color <- "#ffffff"
+background_color <- "#000000"
+
+#Plotting the final image while feeding in options#
+#Fill variable gets the colors from the dataset#
+circle_row |>
+  ggplot(aes(x,y, group = group))+
+  theme_void()+
+  geom_polygon(fill = circle_row$color, color = line_color, linetype = line_style)+
+  theme(plot.background = element_rect(fill = background_color))+
+  coord_polar() #warps the circles into a "wheel"
+
+```
+
+### 
+
+::: fragment
+<center>![](images/examples/patterns_ex3.png){style="border: 5px solid #000000" width="500"}</center>
+:::
+:::
+:::
+
+##  {.trans background-color="#000000" background-image="images/trans_4.png" background-size="80%"}
+
+<center>
+
+<h1 style="color:white;">
+
+Making Data For Collages
+
+</h1>
+
+</center>
+
+## <sup>Making Data for Collages - Understanding the Basics</sup> {.light background-color="#fa9df2"}
+
+<h1 style="color:white;">
+
+Making Data for Collages
+
+</h1>
