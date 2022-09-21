@@ -518,7 +518,7 @@ Making Data for Patterns
 
 <br><br>
 
-::: fragment
+::: {.fragment}
 <center><q>How do we go from datasets with numbers and strings to rtistry?</q></center>
 :::
 
@@ -536,7 +536,7 @@ Making Data for Patterns
 
 <br>
 
-::: fragment
+::: {.fragment}
 <center>
 
 <h3>Def. <sub>(Oxford)</sub>: ***A repeated decorative design.***</h3>
@@ -544,7 +544,7 @@ Making Data for Patterns
 </center>
 :::
 
-::: fragment
+::: {.fragment}
 <center>![](images/examples/pattern_ex.png)</center>
 :::
 
@@ -614,7 +614,7 @@ base_data |>
 
 ### 
 
-::: fragment
+::: {.fragment}
 <br>
 
 ```{r polka_plot1, echo = FALSE}
@@ -662,7 +662,7 @@ base_data |>
 
 ### 
 
-::: fragment
+::: {.fragment}
 ```{r polka_plot2, echo = FALSE}
 
 base_data |>
@@ -694,7 +694,7 @@ grid_points |>
 
 ### 
 
-::: fragment
+::: {.fragment}
 ```{r polka_plot3, echo = FALSE}
 
 grid_points |>
@@ -731,7 +731,7 @@ polka_dots |>
 
 ### 
 
-::: fragment
+::: {.fragment}
 ```{r polka_plot4, echo = FALSE}
 
 polka_dots |>
@@ -768,7 +768,7 @@ polka_dots |>
 
 ### 
 
-::: fragment
+::: {.fragment}
 ```{r polka_plot5, echo = FALSE}
 
 polka_dots |>
@@ -852,7 +852,7 @@ base_data |>
 
 ### 
 
-::: fragment
+::: {.fragment}
 <br>
 
 ```{r chevron_plot1, echo = FALSE}
@@ -912,7 +912,7 @@ zigs |>
 
 ### 
 
-::: fragment
+::: {.fragment}
 ```{r chevron_plot3, echo = FALSE}
 
 zigs |>
@@ -949,7 +949,7 @@ zigzags |>
 
 ### 
 
-::: fragment
+::: {.fragment}
 ```{r chevron_plot4, echo = FALSE}
 
 zigzags |>
@@ -988,7 +988,7 @@ zigzags |>
 
 ### 
 
-::: fragment
+::: {.fragment}
 ```{r chevron_plot4b, echo = FALSE}
 
 zigzags |>
@@ -1034,7 +1034,7 @@ zigzag_colored |>
 
 ### 
 
-::: fragment
+::: {.fragment}
 ```{r chevron_plot5, echo = FALSE}
 
 zigzag_colored |>
@@ -1122,7 +1122,7 @@ circle |>
 
 ### 
 
-::: fragment
+::: {.fragment}
 <br>
 
 ```{r rainbow_plot1, echo = FALSE}
@@ -1194,7 +1194,7 @@ circle_row |>
 
 ### 
 
-::: fragment
+::: {.fragment}
 ```{r rainbow_plot3, echo = FALSE}
 
 circle_row |>
@@ -1233,7 +1233,7 @@ circle_row |>
 
 ### 
 
-::: fragment
+::: {.fragment}
 ```{r rainbow_plot4, echo = FALSE}
 
 circle_row |>
@@ -1273,7 +1273,7 @@ circle_row |>
 
 ### 
 
-::: fragment
+::: {.fragment}
 <center>![](images/examples/patterns_ex3.png){style="border: 5px solid #000000" width="500"}</center>
 :::
 :::
@@ -1291,10 +1291,358 @@ Making Data For Collages
 
 </center>
 
-## <sup>Making Data for Collages - Understanding the Basics</sup> {.light background-color="#fa9df2"}
+## <sup>Making Data for Collages - What is a Collage?</sup> {.light background-color="#fa9df2"}
 
 <h1 style="color:white;">
 
 Making Data for Collages
 
 </h1>
+
+<br>
+
+<h2>What is a Collage?</h2>
+
+<br>
+
+<center>
+
+::: {.fragment}
+<h3>Def. <sub>(Oxford)</sub>: <em><b>a piece of art made by sticking various different [materials]{style="background-color:#3c253a; color:#ffffff;"} on to a [backing.]{style="background-color:#3c253a; color:#ffffff;"}</b></em></h3>
+:::
+
+::: {.fragment}
+![](images/examples/collage_ex.png){style="border: solid; color: #000000; " width="900" height="420"}
+:::
+
+</center>
+
+## <sup>Making Data for Collages - Sunset Example - A Closer Look</sup> {.light background-color="#fa9df2"}
+
+<h1 style="color:white;">
+
+Making Data for Collages
+
+</h1>
+
+<br>
+
+<center>![](images/examples/collage_ex.png){style="border: solid; color: #000000; " width="1300"}</center>
+
+## <sup>Patterns - Sunset Example - Observations</sup> {.light background-color="#fa9df2"}
+
+<h1 style="color:white;">
+
+Making Data for Patterns
+
+</h1>
+
+::: columns
+::: {.column width="50%"}
+![](images/examples/collage_ex.png){style="border: 5px solid #000000" width="800" height="450"}
+:::
+
+::: {.column width="50%"}
+<h3>🔎 Observations we can make:</h3>
+
+<br>
+
+::: incremental
+-   The image is landscape, (the max X limit is larger than the max Y limit.)
+-   Background is a gradient of colors
+-   A pattern of white lines varying in size is on top of the gradient
+-   There's a white circle in the middle that's made up of thick solid white lines
+:::
+:::
+:::
+
+## <sup>Collages - Sunset Example - Step by Step</sup> {.light background-color="#fa9df2"}
+
+<h1 style="color:white;">
+
+Making Data for Collages
+
+</h1>
+
+::: panel-tabset
+## Base Plot
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r sunset_ex1, echo = TRUE, fig.show='hide'}
+
+# "04_collage_ex.R" in the example_scripts folder#
+
+#Library Load-in#
+#library(ggplot2) #For making the piece w/ ggplot
+#library(dplyr) #For data wrangling
+#library(tibble) #To work with tibbles
+library(sp) #For doing more complicated polygon work
+
+#1) Set up our ggplot to be landscape#
+
+#X limits#
+xmin <- 0
+xmax <- 20
+
+#Y limits#
+ymin <- 0
+ymax <- 10
+
+#Creating the base_data#
+base_data <- tibble(x = seq(xmin,xmax, length.out = 100),
+                    y = seq(ymin,ymax, length.out = 100))
+
+#Viewing the plot#
+base_data |>
+  ggplot(aes(x,y))
+
+```
+
+### 
+
+::: {.fragment}
+<br>
+
+```{r sunset_plot1, echo = FALSE}
+
+base_data |>
+  ggplot(aes(x,y))
+
+```
+:::
+:::
+
+## The Goal and The Base Plot</sup>
+
+<center>
+
+::: {layout="[[40,60]]"}
+### 
+
+![](images/examples/collage_ex.png){style="border: 5px solid #000000" width="500"}
+
+### 
+
+```{r sunset_plot1b, echo = FALSE}
+
+base_data |>
+  ggplot(aes(x,y))
+
+```
+:::
+
+</center>
+
+## Creating a Gradient
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r sunset_ex2, echo = TRUE, fig.show='hide'}
+
+#2) Set up a color palette and data for geom_segment()#
+
+#Data frame with background segment lines#
+back_segments <- tibble(x = seq(xmin, xmax, length.out = 100),
+                 xend = x, #x == xend for vertical lines#
+                 y = ymin,
+                 yend = ymax)
+
+#Create a color palette to fit the data frame (100 rows)#
+color_pal <- c("#9C2C77", "#CD104D", "#E14D2A", "#FD841F")
+segment_colors <- colorRampPalette(color_pal)(nrow(back_segments))
+
+#View the plot while feeding in color palette and tweaking size#
+back_segments |>
+  ggplot(aes(x,y, xend = xend, yend = yend))+
+  geom_segment(color = segment_colors, size = 10)
+
+```
+
+### 
+
+::: {.fragment}
+<br>
+
+
+:::
+:::
+
+## Creating an Overlay Pattern
+
+::: {layout="[[40,60]]"}
+
+### Code:
+
+```{r sunset_ex3, echo = TRUE, fig.show='hide'}
+
+#3) Expand the base data with expand.grid() to create a pattern#
+#Create a new expanded data frame off of base_data#
+overlay <- expand.grid(base_data)
+
+#Overlay Options#
+#Set the color for the overlay pattern
+overlay_color <- "#ffffff"
+
+#Create varying sizes for the overlay to fill the data#
+overlay_sizes <- sample(seq(.01, .2, length.out = nrow(overlay)))
+
+
+#Layer the overlay data frame onto the back_segments#
+back_segments |>
+  ggplot(aes(x,y, 
+             xend = xend, 
+             yend = yend))+
+  theme_void()+
+  geom_segment(color = segment_colors, 
+               size = 10)+
+  geom_path(data = overlay, 
+            aes(x,y, group = y),
+            color = overlay_color, 
+            size = overlay_sizes,
+            inherit.aes = FALSE)
+
+```
+
+
+
+::: {.fragment}
+
+<br>
+
+<center>![](images/examples/collage_overlay.png){width="800"}</center>
+
+:::
+:::
+
+
+## Creating a Fancy Circle
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r sunset_ex4, echo = TRUE, fig.show='hide'}
+
+#4) Create a circle in the middle of the image from scratch#
+
+#Setting the angles#
+angles <- seq(0,2*pi, length.out = 100)
+
+#Storing in a dataframe for reference#
+ref_circle <- tibble(x = cos(angles) * (ymax/2) + (xmax/2) ,
+                     y = sin(angles) * (ymax/2) + (ymax/2))
+
+#Detecting points that only fit inside the circle#
+#Basing off overlay data because it's already created#
+fancy_circle <- overlay |>
+  mutate(logic = point.in.polygon(x,y, circle$x, circle$y)) |>
+  filter(logic == 1) 
+
+#Setting fancy circle options#
+circle_width <- 2
+circle_color <- "#ffffff"
+
+#Setting options for the image#
+line_style <- 2
+line_color <- "#ffffff"
+background_color <- "#000000"
+
+#Layer the fancy circle data onto the existing plot#
+back_segments |>
+  ggplot(aes(x,y, xend = xend, yend = yend))+
+  theme_void()+
+  geom_segment(color = segment_colors, size = 10)+
+  geom_path(data = overlay, aes(x,y, group = y),
+            color = overlay_color, 
+            size = overlay_sizes,
+            inherit.aes = FALSE) +
+  geom_path(data = fancy_circle, 
+            aes(x,y, group = x), 
+            color = circle_color, 
+            size = 2, 
+            lineend = "butt",
+            inherit.aes = FALSE)
+
+```
+
+### 
+
+::: {.fragment}
+
+<br>
+
+<center>![](images/examples/collage_fancy.png){width="800"}</center>
+:::
+:::
+
+## Layering Everything Together
+
+::: {layout="[[40,60]]"}
+### Code:
+
+```{r sunset_ex5, echo = TRUE, fig.show='hide'}
+
+#This can be layered differently to reduce code#
+#geom order from top to bottom determines display order#
+
+overlay |>
+  ggplot(aes(x,y))+
+  theme_void()+
+  geom_segment(data = back_segments, 
+               aes(x,y, xend = xend, yend = yend),
+               color = segment_colors, 
+               size = 10,
+               inherit.aes = FALSE)+
+  geom_path(aes(x,y, group = y),
+            color = overlay_color, 
+            size = overlay_sizes) +
+  geom_path(data = fancy_circle, 
+            aes(x,y, group = x), 
+            color = circle_color, 
+            size = 2, 
+            lineend = "butt")+
+  coord_equal(expand = FALSE)
+
+
+```
+
+### 
+
+::: {.fragment}
+
+<br>
+
+<center>![](images/examples/collage_ex.png){width="800"}</center>
+
+:::
+:::
+:::
+
+## <sup>Making Data for Collages - Key Takeaway</sup> {.light background-color="#fa9df2"}
+
+<h1 style="color:white;">
+
+Making Data for Collages
+
+</h1>
+
+<br>
+
+<center>
+<h2>💡 Making Collages in ggplot is all about layering geoms and patterns together. The pieces can be abstract, randomly generated, or manually calculated. Experimenting with each geom's aesthetics can also produce cool results.</h2>
+
+</center>
+
+##  {.trans background-color="#000000" background-image="images/trans_5.png" background-size="80%"}
+
+<center>
+
+<h1 style="color:white;">
+
+Live Code & Questions
+
+</h1>
+
+</center>

@@ -1473,11 +1473,312 @@ Def. <sub>(Oxford)</sub>: <strong><em>A repeated decorative design.</em></strong
 </h1>
 </center>
 </section>
-<section id="making-data-for-collages---understanding-the-basics" class="slide level2 light" data-background-color="#fa9df2">
-<h2><sup>Making Data for Collages - Understanding the Basics</sup></h2>
+<section id="making-data-for-collages---what-is-a-collage" class="slide level2 light" data-background-color="#fa9df2">
+<h2><sup>Making Data for Collages - What is a Collage?</sup></h2>
 <h1 style="color:white;">
 <p>Making Data for Collages</p>
 </h1>
+<p><br></p>
+<h2>
+What is a Collage?
+</h2>
+<p><br></p>
+<center>
+<div class="fragment">
+<h3>
+Def. <sub>(Oxford)</sub>: <em><b>a piece of art made by sticking various different <span style="background-color:#3c253a; color:#ffffff;">materials</span> on to a <span style="background-color:#3c253a; color:#ffffff;">backing.</span></b></em>
+</h3>
+</div>
+<div class="fragment">
+<p><img data-src="images/examples/collage_ex.png" style="border: solid; color: #000000; " width="900" height="420"></p>
+</div>
+</center>
+</section>
+<section id="making-data-for-collages---sunset-example---a-closer-look" class="slide level2 light" data-background-color="#fa9df2">
+<h2><sup>Making Data for Collages - Sunset Example - A Closer Look</sup></h2>
+<h1 style="color:white;">
+<p>Making Data for Collages</p>
+</h1>
+<p><br></p>
+<center>
+<img data-src="images/examples/collage_ex.png" style="border: solid; color: #000000; " width="1300">
+</center>
+</section>
+<section id="patterns---sunset-example---observations" class="slide level2 light" data-background-color="#fa9df2">
+<h2><sup>Patterns - Sunset Example - Observations</sup></h2>
+<h1 style="color:white;">
+<p>Making Data for Patterns</p>
+</h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/examples/collage_ex.png" style="border: 5px solid #000000" width="800" height="450"></p>
+</div><div class="column" style="width:50%;">
+<h3>
+🔎 Observations we can make:
+</h3>
+<p><br></p>
+<div>
+<ul>
+<li class="fragment">The image is landscape, (the max X limit is larger than the max Y limit.)</li>
+<li class="fragment">Background is a gradient of colors</li>
+<li class="fragment">A pattern of white lines varying in size is on top of the gradient</li>
+<li class="fragment">There’s a white circle in the middle that’s made up of thick solid white lines</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="collages---sunset-example---step-by-step" class="slide level2 light" data-background-color="#fa9df2">
+<h2><sup>Collages - Sunset Example - Step by Step</sup></h2>
+<h1 style="color:white;">
+<p>Making Data for Collages</p>
+</h1>
+<div class="panel-tabset">
+<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">Base Plot</a></li><li><a href="#tabset-7-2">The Goal and The Base Plot</a></li><li><a href="#tabset-7-3">Creating a Gradient</a></li><li><a href="#tabset-7-4">Creating an Overlay Pattern</a></li><li><a href="#tabset-7-5">Creating a Fancy Circle</a></li><li><a href="#tabset-7-6">Layering Everything Together</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<p><strong>Code:</strong></p>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># "04_collage_ex.R" in the example_scripts folder#</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a></span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="co">#Library Load-in#</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a><span class="co">#library(ggplot2) #For making the piece w/ ggplot</span></span>
+<span id="cb19-5"><a href="#cb19-5"></a><span class="co">#library(dplyr) #For data wrangling</span></span>
+<span id="cb19-6"><a href="#cb19-6"></a><span class="co">#library(tibble) #To work with tibbles</span></span>
+<span id="cb19-7"><a href="#cb19-7"></a><span class="fu">library</span>(sp) <span class="co">#For doing more complicated polygon work</span></span>
+<span id="cb19-8"><a href="#cb19-8"></a></span>
+<span id="cb19-9"><a href="#cb19-9"></a><span class="co">#1) Set up our ggplot to be landscape#</span></span>
+<span id="cb19-10"><a href="#cb19-10"></a></span>
+<span id="cb19-11"><a href="#cb19-11"></a><span class="co">#X limits#</span></span>
+<span id="cb19-12"><a href="#cb19-12"></a>xmin <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb19-13"><a href="#cb19-13"></a>xmax <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb19-14"><a href="#cb19-14"></a></span>
+<span id="cb19-15"><a href="#cb19-15"></a><span class="co">#Y limits#</span></span>
+<span id="cb19-16"><a href="#cb19-16"></a>ymin <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb19-17"><a href="#cb19-17"></a>ymax <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb19-18"><a href="#cb19-18"></a></span>
+<span id="cb19-19"><a href="#cb19-19"></a><span class="co">#Creating the base_data#</span></span>
+<span id="cb19-20"><a href="#cb19-20"></a>base_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">seq</span>(xmin,xmax, <span class="at">length.out =</span> <span class="dv">100</span>),</span>
+<span id="cb19-21"><a href="#cb19-21"></a>                    <span class="at">y =</span> <span class="fu">seq</span>(ymin,ymax, <span class="at">length.out =</span> <span class="dv">100</span>))</span>
+<span id="cb19-22"><a href="#cb19-22"></a></span>
+<span id="cb19-23"><a href="#cb19-23"></a><span class="co">#Viewing the plot#</span></span>
+<span id="cb19-24"><a href="#cb19-24"></a>base_data <span class="sc">|&gt;</span></span>
+<span id="cb19-25"><a href="#cb19-25"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<p><strong></strong></p>
+<p><br></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/sunset_plot1-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-7-2">
+<center>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<p><strong></strong></p>
+<p><img data-src="images/examples/collage_ex.png" style="border: 5px solid #000000" width="500"></p>
+</div>
+<div class="cell quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<p><strong></strong></p>
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/sunset_plot1b-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</center>
+</div>
+<div id="tabset-7-3">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<p><strong>Code:</strong></p>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="co">#2) Set up a color palette and data for geom_segment()#</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a></span>
+<span id="cb20-3"><a href="#cb20-3"></a><span class="co">#Data frame with background segment lines#</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a>back_segments <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">seq</span>(xmin, xmax, <span class="at">length.out =</span> <span class="dv">100</span>),</span>
+<span id="cb20-5"><a href="#cb20-5"></a>                 <span class="at">xend =</span> x, <span class="co">#x == xend for vertical lines#</span></span>
+<span id="cb20-6"><a href="#cb20-6"></a>                 <span class="at">y =</span> ymin,</span>
+<span id="cb20-7"><a href="#cb20-7"></a>                 <span class="at">yend =</span> ymax)</span>
+<span id="cb20-8"><a href="#cb20-8"></a></span>
+<span id="cb20-9"><a href="#cb20-9"></a><span class="co">#Create a color palette to fit the data frame (100 rows)#</span></span>
+<span id="cb20-10"><a href="#cb20-10"></a>color_pal <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"#9C2C77"</span>, <span class="st">"#CD104D"</span>, <span class="st">"#E14D2A"</span>, <span class="st">"#FD841F"</span>)</span>
+<span id="cb20-11"><a href="#cb20-11"></a>segment_colors <span class="ot">&lt;-</span> <span class="fu">colorRampPalette</span>(color_pal)(<span class="fu">nrow</span>(back_segments))</span>
+<span id="cb20-12"><a href="#cb20-12"></a></span>
+<span id="cb20-13"><a href="#cb20-13"></a><span class="co">#View the plot while feeding in color palette and tweaking size#</span></span>
+<span id="cb20-14"><a href="#cb20-14"></a>back_segments <span class="sc">|&gt;</span></span>
+<span id="cb20-15"><a href="#cb20-15"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y, <span class="at">xend =</span> xend, <span class="at">yend =</span> yend))<span class="sc">+</span></span>
+<span id="cb20-16"><a href="#cb20-16"></a>  <span class="fu">geom_segment</span>(<span class="at">color =</span> segment_colors, <span class="at">size =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<p><strong></strong></p>
+<p><br></p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-7-4">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<p><strong>Code:</strong></p>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="co">#3) Expand the base data with expand.grid() to create a pattern#</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="co">#Create a new expanded data frame off of base_data#</span></span>
+<span id="cb21-3"><a href="#cb21-3"></a>overlay <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(base_data)</span>
+<span id="cb21-4"><a href="#cb21-4"></a></span>
+<span id="cb21-5"><a href="#cb21-5"></a><span class="co">#Overlay Options#</span></span>
+<span id="cb21-6"><a href="#cb21-6"></a><span class="co">#Set the color for the overlay pattern</span></span>
+<span id="cb21-7"><a href="#cb21-7"></a>overlay_color <span class="ot">&lt;-</span> <span class="st">"#ffffff"</span></span>
+<span id="cb21-8"><a href="#cb21-8"></a></span>
+<span id="cb21-9"><a href="#cb21-9"></a><span class="co">#Create varying sizes for the overlay to fill the data#</span></span>
+<span id="cb21-10"><a href="#cb21-10"></a>overlay_sizes <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">seq</span>(.<span class="dv">01</span>, .<span class="dv">2</span>, <span class="at">length.out =</span> <span class="fu">nrow</span>(overlay)))</span>
+<span id="cb21-11"><a href="#cb21-11"></a></span>
+<span id="cb21-12"><a href="#cb21-12"></a></span>
+<span id="cb21-13"><a href="#cb21-13"></a><span class="co">#Layer the overlay data frame onto the back_segments#</span></span>
+<span id="cb21-14"><a href="#cb21-14"></a>back_segments <span class="sc">|&gt;</span></span>
+<span id="cb21-15"><a href="#cb21-15"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y, </span>
+<span id="cb21-16"><a href="#cb21-16"></a>             <span class="at">xend =</span> xend, </span>
+<span id="cb21-17"><a href="#cb21-17"></a>             <span class="at">yend =</span> yend))<span class="sc">+</span></span>
+<span id="cb21-18"><a href="#cb21-18"></a>  <span class="fu">theme_void</span>()<span class="sc">+</span></span>
+<span id="cb21-19"><a href="#cb21-19"></a>  <span class="fu">geom_segment</span>(<span class="at">color =</span> segment_colors, </span>
+<span id="cb21-20"><a href="#cb21-20"></a>               <span class="at">size =</span> <span class="dv">10</span>)<span class="sc">+</span></span>
+<span id="cb21-21"><a href="#cb21-21"></a>  <span class="fu">geom_path</span>(<span class="at">data =</span> overlay, </span>
+<span id="cb21-22"><a href="#cb21-22"></a>            <span class="fu">aes</span>(x,y, <span class="at">group =</span> y),</span>
+<span id="cb21-23"><a href="#cb21-23"></a>            <span class="at">color =</span> overlay_color, </span>
+<span id="cb21-24"><a href="#cb21-24"></a>            <span class="at">size =</span> overlay_sizes,</span>
+<span id="cb21-25"><a href="#cb21-25"></a>            <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<p><br></p>
+<center>
+<img data-src="images/examples/collage_overlay.png" width="800">
+</center>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-7-5">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<p><strong>Code:</strong></p>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="co">#4) Create a circle in the middle of the image from scratch#</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a></span>
+<span id="cb22-3"><a href="#cb22-3"></a><span class="co">#Setting the angles#</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a>angles <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi, <span class="at">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb22-5"><a href="#cb22-5"></a></span>
+<span id="cb22-6"><a href="#cb22-6"></a><span class="co">#Storing in a dataframe for reference#</span></span>
+<span id="cb22-7"><a href="#cb22-7"></a>ref_circle <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">cos</span>(angles) <span class="sc">*</span> (ymax<span class="sc">/</span><span class="dv">2</span>) <span class="sc">+</span> (xmax<span class="sc">/</span><span class="dv">2</span>) ,</span>
+<span id="cb22-8"><a href="#cb22-8"></a>                     <span class="at">y =</span> <span class="fu">sin</span>(angles) <span class="sc">*</span> (ymax<span class="sc">/</span><span class="dv">2</span>) <span class="sc">+</span> (ymax<span class="sc">/</span><span class="dv">2</span>))</span>
+<span id="cb22-9"><a href="#cb22-9"></a></span>
+<span id="cb22-10"><a href="#cb22-10"></a><span class="co">#Detecting points that only fit inside the circle#</span></span>
+<span id="cb22-11"><a href="#cb22-11"></a><span class="co">#Basing off overlay data because it's already created#</span></span>
+<span id="cb22-12"><a href="#cb22-12"></a>fancy_circle <span class="ot">&lt;-</span> overlay <span class="sc">|&gt;</span></span>
+<span id="cb22-13"><a href="#cb22-13"></a>  <span class="fu">mutate</span>(<span class="at">logic =</span> <span class="fu">point.in.polygon</span>(x,y, circle<span class="sc">$</span>x, circle<span class="sc">$</span>y)) <span class="sc">|&gt;</span></span>
+<span id="cb22-14"><a href="#cb22-14"></a>  <span class="fu">filter</span>(logic <span class="sc">==</span> <span class="dv">1</span>) </span>
+<span id="cb22-15"><a href="#cb22-15"></a></span>
+<span id="cb22-16"><a href="#cb22-16"></a><span class="co">#Setting fancy circle options#</span></span>
+<span id="cb22-17"><a href="#cb22-17"></a>circle_width <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb22-18"><a href="#cb22-18"></a>circle_color <span class="ot">&lt;-</span> <span class="st">"#ffffff"</span></span>
+<span id="cb22-19"><a href="#cb22-19"></a></span>
+<span id="cb22-20"><a href="#cb22-20"></a><span class="co">#Setting options for the image#</span></span>
+<span id="cb22-21"><a href="#cb22-21"></a>line_style <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb22-22"><a href="#cb22-22"></a>line_color <span class="ot">&lt;-</span> <span class="st">"#ffffff"</span></span>
+<span id="cb22-23"><a href="#cb22-23"></a>background_color <span class="ot">&lt;-</span> <span class="st">"#000000"</span></span>
+<span id="cb22-24"><a href="#cb22-24"></a></span>
+<span id="cb22-25"><a href="#cb22-25"></a><span class="co">#Layer the fancy circle data onto the existing plot#</span></span>
+<span id="cb22-26"><a href="#cb22-26"></a>back_segments <span class="sc">|&gt;</span></span>
+<span id="cb22-27"><a href="#cb22-27"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y, <span class="at">xend =</span> xend, <span class="at">yend =</span> yend))<span class="sc">+</span></span>
+<span id="cb22-28"><a href="#cb22-28"></a>  <span class="fu">theme_void</span>()<span class="sc">+</span></span>
+<span id="cb22-29"><a href="#cb22-29"></a>  <span class="fu">geom_segment</span>(<span class="at">color =</span> segment_colors, <span class="at">size =</span> <span class="dv">10</span>)<span class="sc">+</span></span>
+<span id="cb22-30"><a href="#cb22-30"></a>  <span class="fu">geom_path</span>(<span class="at">data =</span> overlay, <span class="fu">aes</span>(x,y, <span class="at">group =</span> y),</span>
+<span id="cb22-31"><a href="#cb22-31"></a>            <span class="at">color =</span> overlay_color, </span>
+<span id="cb22-32"><a href="#cb22-32"></a>            <span class="at">size =</span> overlay_sizes,</span>
+<span id="cb22-33"><a href="#cb22-33"></a>            <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb22-34"><a href="#cb22-34"></a>  <span class="fu">geom_path</span>(<span class="at">data =</span> fancy_circle, </span>
+<span id="cb22-35"><a href="#cb22-35"></a>            <span class="fu">aes</span>(x,y, <span class="at">group =</span> x), </span>
+<span id="cb22-36"><a href="#cb22-36"></a>            <span class="at">color =</span> circle_color, </span>
+<span id="cb22-37"><a href="#cb22-37"></a>            <span class="at">size =</span> <span class="dv">2</span>, </span>
+<span id="cb22-38"><a href="#cb22-38"></a>            <span class="at">lineend =</span> <span class="st">"butt"</span>,</span>
+<span id="cb22-39"><a href="#cb22-39"></a>            <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<p><strong></strong></p>
+<p><br></p>
+<center>
+<img data-src="images/examples/collage_fancy.png" width="800">
+</center>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-7-6">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<p><strong>Code:</strong></p>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="co">#This can be layered differently to reduce code#</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="co">#geom order from top to bottom determines display order#</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a></span>
+<span id="cb23-4"><a href="#cb23-4"></a>overlay <span class="sc">|&gt;</span></span>
+<span id="cb23-5"><a href="#cb23-5"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y))<span class="sc">+</span></span>
+<span id="cb23-6"><a href="#cb23-6"></a>  <span class="fu">theme_void</span>()<span class="sc">+</span></span>
+<span id="cb23-7"><a href="#cb23-7"></a>  <span class="fu">geom_segment</span>(<span class="at">data =</span> back_segments, </span>
+<span id="cb23-8"><a href="#cb23-8"></a>               <span class="fu">aes</span>(x,y, <span class="at">xend =</span> xend, <span class="at">yend =</span> yend),</span>
+<span id="cb23-9"><a href="#cb23-9"></a>               <span class="at">color =</span> segment_colors, </span>
+<span id="cb23-10"><a href="#cb23-10"></a>               <span class="at">size =</span> <span class="dv">10</span>,</span>
+<span id="cb23-11"><a href="#cb23-11"></a>               <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>)<span class="sc">+</span></span>
+<span id="cb23-12"><a href="#cb23-12"></a>  <span class="fu">geom_path</span>(<span class="fu">aes</span>(x,y, <span class="at">group =</span> y),</span>
+<span id="cb23-13"><a href="#cb23-13"></a>            <span class="at">color =</span> overlay_color, </span>
+<span id="cb23-14"><a href="#cb23-14"></a>            <span class="at">size =</span> overlay_sizes) <span class="sc">+</span></span>
+<span id="cb23-15"><a href="#cb23-15"></a>  <span class="fu">geom_path</span>(<span class="at">data =</span> fancy_circle, </span>
+<span id="cb23-16"><a href="#cb23-16"></a>            <span class="fu">aes</span>(x,y, <span class="at">group =</span> x), </span>
+<span id="cb23-17"><a href="#cb23-17"></a>            <span class="at">color =</span> circle_color, </span>
+<span id="cb23-18"><a href="#cb23-18"></a>            <span class="at">size =</span> <span class="dv">2</span>, </span>
+<span id="cb23-19"><a href="#cb23-19"></a>            <span class="at">lineend =</span> <span class="st">"butt"</span>)<span class="sc">+</span></span>
+<span id="cb23-20"><a href="#cb23-20"></a>  <span class="fu">coord_equal</span>(<span class="at">expand =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<p><strong></strong></p>
+<p><br></p>
+<center>
+<img data-src="images/examples/collage_ex.png" width="800">
+</center>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="making-data-for-collages---key-takeaway" class="slide level2 light" data-background-color="#fa9df2">
+<h2><sup>Making Data for Collages - Key Takeaway</sup></h2>
+<h1 style="color:white;">
+<p>Making Data for Collages</p>
+</h1>
+<p><br></p>
+<center>
+<h2>
+💡 Making Collages in ggplot is all about layering geoms and patterns together. The pieces can be abstract, randomly generated, or manually calculated. Experimenting with each geom’s aesthetics can also produce cool results.
+</h2>
+</center>
+</section>
+<section id="section-38" class="slide level2 trans" data-background-color="#000000" data-background-image="images/trans_5.png" data-background-size="80%">
+<h2></h2>
+<center>
+<h1 style="color:white;">
+<p>Live Code &amp; Questions</p>
+</h1>
+</center>
 <div class="footer footer-default">
 
 </div>
