@@ -23,8 +23,6 @@ title-slide-attributes:
   data-background-size: "60%"
   data-background-position: "right"
   data-background-color: "#000000"
-type: website
-output-dir: docs
 ---
 
 ## <sup>About Me</sup> {.dark background-color="#562457"}
