@@ -343,7 +343,11 @@ body > div.reveal.focused.has-horizontal-slides.ready.fade.has-light-background 
   opacity: 0.85;
 }
 
+/* Manual Code Block Background */
 
+.sourceCode {
+  background-color: #ffffff;
+}
 
 
 

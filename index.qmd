@@ -9,12 +9,13 @@ format:
     slide-number: true
     theme: theme.scss
     css: theme.css
-    width: 1690
+    width: 1680
     height: 1080
     linkcolor: "#ad58c4"
     highlight-style: github
     code-copy: true
-    code-overflow: wrap
+    code-overflow: scroll
+    code-block-bg: true
     transition: fade
 editor: visual
 title-slide-attributes: 
@@ -28,7 +29,11 @@ output-dir: docs
 
 ## <sup>About Me</sup> {.dark background-color="#562457"}
 
-<h1>About Me</h1>
+<h1>
+
+About Me
+
+</h1>
 
 ::: columns
 ::: {.column width="60%"}
@@ -55,23 +60,43 @@ What Are We Doing Today?
 </h1>
 
 ::: incremental
--   <h2>What is Rtistry and What's the Point?</h2>
+-   <h2>
+
+    What is Rtistry and What's the Point?
+
+    </h2>
 
     <br>
 
--   <h2>Minding Your Toolbox</h2>
+-   <h2>
+
+    Minding Your Toolbox
+
+    </h2>
 
     <br>
 
--   <h2>Making Data for Patterns</h2>
+-   <h2>
+
+    Making Data for Patterns
+
+    </h2>
 
     <br>
 
--   <h2>Making Data for Collages</h2>
+-   <h2>
+
+    Making Data for Collages
+
+    </h2>
 
     <br>
 
--   <h2>Putting it to Practice (Live Code)</h2>
+-   <h2>
+
+    Putting it to Practice (Live Code)
+
+    </h2>
 :::
 
 ##  {.trans background-color="#000000" background-image="images/trans_1.png" background-size="80%"}
@@ -88,59 +113,111 @@ What is Rtistry<br> &<br>What's the point?
 
 ## <sup>What is Rtistry?</sup> {.dark background-color="#562457"}
 
-<h1>What is Rtistry?</h1>
+<h1>
+
+What is Rtistry?
+
+</h1>
 
 <br><br><br>
 
-<center><q>Pieces of art created with code in the R programming language.</q></center>
+<center>
+
+<q>Pieces of art created with code in the R programming language.</q>
+
+</center>
 
 ## <sup>Generative/Random Art Examples</sup> {.dark background-color="#562457"}
 
-<h1>What is Rtistry?</h1>
+<h1>
+
+What is Rtistry?
+
+</h1>
 
 <br><br>
 
-<center><q>These pieces can be generated randomly...</q></center>
+<center>
+
+<q>These pieces can be generated randomly...</q>
+
+</center>
 
 ::: columns
 ::: {.column width="50%"}
-<center>![](images/examples/ex_1.jpg){style="border: 5px solid #000000" width="800" height="500"}</center>
+<center>
+
+![](images/examples/ex_1.jpg){style="border: 5px solid #000000" width="800" height="500"}
+
+</center>
 :::
 
 ::: {.column width="50%"}
-<center>![](images/examples/ex_2.jpg){style="border: 5px solid #000000" width="800" height="500"}</center>
+<center>
+
+![](images/examples/ex_2.jpg){style="border: 5px solid #000000" width="800" height="500"}
+
+</center>
 :::
 :::
 
 ## <sup>Calculated/Manual Examples</sup> {.dark background-color="#562457"}
 
-<h1>What is Rtistry?</h1>
+<h1>
+
+What is Rtistry?
+
+</h1>
 
 <br><br>
 
-<center><q>...or intentionally calculated</q></center>
+<center>
+
+<q>...or intentionally calculated</q>
+
+</center>
 
 ::: columns
 ::: {.column width="50%"}
-<center>![](images/examples/ex_3.jpg){style="border: 5px solid #000000" width="800" height="500"}</center>
+<center>
+
+![](images/examples/ex_3.jpg){style="border: 5px solid #000000" width="800" height="500"}
+
+</center>
 :::
 
 ::: {.column width="50%"}
-<center>![](images/examples/ex_4.jpg){style="border: 5px solid #000000" width="800" height="500"}</center>
+<center>
+
+![](images/examples/ex_4.jpg){style="border: 5px solid #000000" width="800" height="500"}
+
+</center>
 :::
 :::
 
 ## <sup>What is the Point of Rtistry?</sup> {.dark background-color="#562457"}
 
-<h1>What's the Point of Rtistry?</h1>
+<h1>
+
+What's the Point of Rtistry?
+
+</h1>
 
 <br><br>
 
-<center>![](images/fun.gif){style="border: 5px solid #000000" width="950" height="600"}</center>
+<center>
+
+![](images/fun.gif){style="border: 5px solid #000000" width="950" height="600"}
+
+</center>
 
 ## <sup>Benefits of Rtistry</sup> {.dark background-color="#562457"}
 
-<h1>What's the Point of Rtistry?</h1>
+<h1>
+
+What's the Point of Rtistry?
+
+</h1>
 
 <br><br><br>
 
@@ -151,9 +228,17 @@ What is Rtistry<br> &<br>What's the point?
 
 ## <sup>Don't be So Serious...Relax</sup> {.dark background-color="#562457"}
 
-<h1>What's the Point of Rtistry?</h1>
+<h1>
 
-<center>![](images/relax.gif){style="border: 5px solid #000000" width="750" height="750"}</center>
+What's the Point of Rtistry?
+
+</h1>
+
+<center>
+
+![](images/relax.gif){style="border: 5px solid #000000" width="750" height="750"}
+
+</center>
 
 ##  {.trans background-color="#000000" background-image="images/trans_2.png" background-size="80%"}
 
@@ -191,11 +276,19 @@ Minding Your Toolbox
 
 ::: columns
 ::: {.column width="50%"}
-<h3><br>Just like some preparation and tools may be needed to make physical pieces of art like oil paintings and watercolors, those wanting to make rtistry might need to make some decisions about what tools to use as well.</h3>
+<h3>
+
+<br>Just like some preparation and tools may be needed to make physical pieces of art like oil paintings and watercolors, those wanting to make rtistry might need to make some decisions about what tools to use as well.
+
+</h3>
 :::
 
 ::: {.column width="50%"}
-<center>![](images/art.gif){style="border: 5px solid #000000" width="600" height="600"}</center>
+<center>
+
+![](images/art.gif){style="border: 5px solid #000000" width="600" height="600"}
+
+</center>
 :::
 :::
 
@@ -518,8 +611,12 @@ Making Data for Patterns
 
 <br><br>
 
-::: {.fragment}
-<center><q>How do we go from datasets with numbers and strings to rtistry?</q></center>
+::: fragment
+<center>
+
+<q>How do we go from datasets with numbers and strings to rtistry?</q>
+
+</center>
 :::
 
 ## <sup>Making Data for Patterns - What is a pattern?</sup> {.dark background-color="#562457"}
@@ -532,21 +629,25 @@ Making Data for Patterns
 
 <br>
 
-<h2>What is a Pattern?</h2>
+<h2>
+
+What is a Pattern?
+
+</h2>
 
 <br>
 
-::: {.fragment}
 <center>
 
-<h3>Def. <sub>(Oxford)</sub>: ***A repeated decorative design.***</h3>
+<h3>
+
+Def. <sub>(Oxford)</sub>: ***A repeated decorative design.***
+
+</h3>
+
+![](images/examples/pattern_ex.png){fig-align="center"}
 
 </center>
-:::
-
-::: {.fragment}
-<center>![](images/examples/pattern_ex.png)</center>
-:::
 
 ## <sup>Patterns - Polka Dots Example - First Look</sup> {.dark background-color="#562457"}
 
@@ -562,7 +663,11 @@ Making Data for Patterns
 :::
 
 ::: {.column width="50%"}
-<h3>🔎 Observations we can make:</h3>
+<h3>
+
+🔎 Observations we can make:
+
+</h3>
 
 <br>
 
@@ -614,7 +719,7 @@ base_data |>
 
 ### 
 
-::: {.fragment}
+::: fragment
 <br>
 
 ```{r polka_plot1, echo = FALSE}
@@ -662,7 +767,7 @@ base_data |>
 
 ### 
 
-::: {.fragment}
+::: fragment
 ```{r polka_plot2, echo = FALSE}
 
 base_data |>
@@ -694,7 +799,7 @@ grid_points |>
 
 ### 
 
-::: {.fragment}
+::: fragment
 ```{r polka_plot3, echo = FALSE}
 
 grid_points |>
@@ -731,7 +836,7 @@ polka_dots |>
 
 ### 
 
-::: {.fragment}
+::: fragment
 ```{r polka_plot4, echo = FALSE}
 
 polka_dots |>
@@ -768,7 +873,7 @@ polka_dots |>
 
 ### 
 
-::: {.fragment}
+::: fragment
 ```{r polka_plot5, echo = FALSE}
 
 polka_dots |>
@@ -797,7 +902,11 @@ Making Data for Patterns
 :::
 
 ::: {.column width="50%"}
-<h3>🔎 Observations we can make:</h3>
+<h3>
+
+🔎 Observations we can make:
+
+</h3>
 
 <br>
 
@@ -852,7 +961,7 @@ base_data |>
 
 ### 
 
-::: {.fragment}
+::: fragment
 <br>
 
 ```{r chevron_plot1, echo = FALSE}
@@ -912,7 +1021,7 @@ zigs |>
 
 ### 
 
-::: {.fragment}
+::: fragment
 ```{r chevron_plot3, echo = FALSE}
 
 zigs |>
@@ -949,7 +1058,7 @@ zigzags |>
 
 ### 
 
-::: {.fragment}
+::: fragment
 ```{r chevron_plot4, echo = FALSE}
 
 zigzags |>
@@ -988,7 +1097,7 @@ zigzags |>
 
 ### 
 
-::: {.fragment}
+::: fragment
 ```{r chevron_plot4b, echo = FALSE}
 
 zigzags |>
@@ -1034,7 +1143,7 @@ zigzag_colored |>
 
 ### 
 
-::: {.fragment}
+::: fragment
 ```{r chevron_plot5, echo = FALSE}
 
 zigzag_colored |>
@@ -1065,7 +1174,11 @@ Making Data for Patterns
 :::
 
 ::: {.column width="50%"}
-<h3>🔎 Observations we can make:</h3>
+<h3>
+
+🔎 Observations we can make:
+
+</h3>
 
 <br>
 
@@ -1122,7 +1235,7 @@ circle |>
 
 ### 
 
-::: {.fragment}
+::: fragment
 <br>
 
 ```{r rainbow_plot1, echo = FALSE}
@@ -1194,7 +1307,7 @@ circle_row |>
 
 ### 
 
-::: {.fragment}
+::: fragment
 ```{r rainbow_plot3, echo = FALSE}
 
 circle_row |>
@@ -1233,7 +1346,7 @@ circle_row |>
 
 ### 
 
-::: {.fragment}
+::: fragment
 ```{r rainbow_plot4, echo = FALSE}
 
 circle_row |>
@@ -1273,8 +1386,12 @@ circle_row |>
 
 ### 
 
-::: {.fragment}
-<center>![](images/examples/patterns_ex3.png){style="border: 5px solid #000000" width="500"}</center>
+::: fragment
+<center>
+
+![](images/examples/patterns_ex3.png){style="border: 5px solid #000000" width="500"}
+
+</center>
 :::
 :::
 :::
@@ -1301,18 +1418,28 @@ Making Data for Collages
 
 <br>
 
-<h2>What is a Collage?</h2>
+<h2>
+
+What is a Collage?
+
+</h2>
 
 <br>
 
 <center>
 
-::: {.fragment}
-<h3>Def. <sub>(Oxford)</sub>: <em><b>a piece of art made by sticking various different [materials]{style="background-color:#3c253a; color:#ffffff;"} on to a [backing.]{style="background-color:#3c253a; color:#ffffff;"}</b></em></h3>
+::: fragment
+<h3>
+
+Def. <sub>(Oxford)</sub>: <em><b>a piece of art made by sticking various different [materials]{style="background-color:#3c253a; color:#ffffff;"} on to a [backing.]{style="background-color:#3c253a; color:#ffffff;"}</b></em>
+
+</h3>
 :::
 
-::: {.fragment}
+::: fragment
+
 ![](images/examples/collage_ex.png){style="border: solid; color: #000000; " width="900" height="420"}
+
 :::
 
 </center>
@@ -1327,7 +1454,9 @@ Making Data for Collages
 
 <br>
 
-<center>![](images/examples/collage_ex.png){style="border: solid; color: #000000; " width="1300"}</center>
+<center>
+![](images/examples/collage_ex.png){style="border: solid; color: #000000; " width="1300" height="650"}
+</center>
 
 ## <sup>Patterns - Sunset Example - Observations</sup> {.light background-color="#fa9df2"}
 
@@ -1343,7 +1472,11 @@ Making Data for Patterns
 :::
 
 ::: {.column width="50%"}
-<h3>🔎 Observations we can make:</h3>
+<h3>
+
+🔎 Observations we can make:
+
+</h3>
 
 <br>
 
@@ -1402,7 +1535,7 @@ base_data |>
 
 ### 
 
-::: {.fragment}
+::: fragment
 <br>
 
 ```{r sunset_plot1, echo = FALSE}
@@ -1463,9 +1596,17 @@ back_segments |>
 
 ### 
 
-::: {.fragment}
+::: fragment
 <br>
 
+```{r sunset_ex2-2, echo = FALSE}
+
+
+back_segments |>
+  ggplot(aes(x,y, xend = xend, yend = yend))+
+  geom_segment(color = segment_colors, size = 10)
+
+```
 
 :::
 :::
@@ -1473,7 +1614,6 @@ back_segments |>
 ## Creating an Overlay Pattern
 
 ::: {layout="[[40,60]]"}
-
 ### Code:
 
 ```{r sunset_ex3, echo = TRUE, fig.show='hide'}
@@ -1506,17 +1646,16 @@ back_segments |>
 
 ```
 
-
-
-::: {.fragment}
-
+::: fragment
 <br>
 
-<center>![](images/examples/collage_overlay.png){width="800"}</center>
+<center>
 
+![](images/examples/collage_overlay.png){width="800"}
+
+</center>
 :::
 :::
-
 
 ## Creating a Fancy Circle
 
@@ -1569,11 +1708,14 @@ back_segments |>
 
 ### 
 
-::: {.fragment}
-
+::: fragment
 <br>
 
-<center>![](images/examples/collage_fancy.png){width="800"}</center>
+<center>
+
+![](images/examples/collage_fancy.png){width="800"}
+
+</center>
 :::
 :::
 
@@ -1610,12 +1752,14 @@ overlay |>
 
 ### 
 
-::: {.fragment}
-
+::: fragment
 <br>
 
-<center>![](images/examples/collage_ex.png){width="800"}</center>
+<center>
 
+![](images/examples/collage_ex.png){width="800"}
+
+</center>
 :::
 :::
 :::
@@ -1631,7 +1775,12 @@ Making Data for Collages
 <br>
 
 <center>
-<h2>💡 Making Collages in ggplot is all about layering geoms and patterns together. The pieces can be abstract, randomly generated, or manually calculated. Experimenting with each geom's aesthetics can also produce cool results.</h2>
+
+<h2>
+
+💡 Making Collages in ggplot is all about layering geoms and patterns together. The pieces can be abstract, randomly generated, or manually calculated. Experimenting with each geom's aesthetics can also produce cool results.
+
+</h2>
 
 </center>
 
