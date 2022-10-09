@@ -9,7 +9,7 @@ format:
     slide-number: true
     theme: theme.scss
     css: theme.css
-    width: 1680
+    width: 1690
     height: 1080
     linkcolor: "#ad58c4"
     highlight-style: github
