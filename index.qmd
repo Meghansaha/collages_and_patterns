@@ -33,6 +33,8 @@ About Me
 
 </h1>
 
+<br>
+
 ::: columns
 ::: {.column width="60%"}
 -   I'm Meghan Harris 👋🏾
@@ -45,9 +47,14 @@ About Me
 :::
 
 ::: {.column width="40%"}
+<center>
+
 ![](images/headshot.jpg){#headshot}
+
+</center>
 :::
 :::
+
 
 ## <sup>What Are We Doing Today?</sup> {.light background-color="#fa9df2"}
 
