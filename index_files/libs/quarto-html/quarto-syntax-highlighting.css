@@ -119,11 +119,20 @@ code span.kw {
   color: #d73a49;
 }
 
+pre > code.sourceCode > span {
+  color: #24292e;
+}
+
 code span {
   color: #24292e;
 }
 
-div.sourceCode {
+code.sourceCode > span {
+  color: #24292e;
+}
+
+div.sourceCode,
+div.sourceCode pre.sourceCode {
   color: #24292e;
 }
 
@@ -161,6 +170,10 @@ code span.vs {
 
 code span.wa {
   color: #ff5555;
+}
+
+.prevent-inlining {
+  content: "</";
 }
 
 /*# sourceMappingURL=debc5d5d77c3f9108843748ff7464032.css.map */

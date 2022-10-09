@@ -1437,9 +1437,7 @@ Def. <sub>(Oxford)</sub>: <em><b>a piece of art made by sticking various differe
 :::
 
 ::: fragment
-
 ![](images/examples/collage_ex.png){style="border: solid; color: #000000; " width="900" height="420"}
-
 :::
 
 </center>
@@ -1455,7 +1453,9 @@ Making Data for Collages
 <br>
 
 <center>
+
 ![](images/examples/collage_ex.png){style="border: solid; color: #000000; " width="1300" height="650"}
+
 </center>
 
 ## <sup>Patterns - Sunset Example - Observations</sup> {.light background-color="#fa9df2"}
@@ -1607,7 +1607,6 @@ back_segments |>
   geom_segment(color = segment_colors, size = 10)
 
 ```
-
 :::
 :::
 
