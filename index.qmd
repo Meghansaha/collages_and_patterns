@@ -1637,7 +1637,7 @@ Making Data for Collages
 
 <h1 style="color:white;">
 
-Live Code & Questions
+Live Code and/or Questions
 
 </h1>
 
