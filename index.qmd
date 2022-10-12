@@ -651,6 +651,8 @@ base_data |>
 
 #Looking at the base_data frame points on the canvas#
 
+base_data 
+
 base_data |>
   ggplot(aes(x,y))+
   geom_point()
@@ -837,7 +839,7 @@ axis_max <- 10
 
 #Creating a "base" data frame#
 base_data <- tibble(x = axis_min:axis_max,
-                    y = axis_min)
+                    y = axis_min) #this is a straight horizontal line
 
 #Plotting the base_data canvas#
 base_data |>
