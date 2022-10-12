@@ -476,7 +476,7 @@ Minding Your Toolbox
 
 **Trigonometric Functions:** [**cospi(),cos(),sin(), etc.**](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/Trig)
 
-**Non-parametric vs. parametric equations/coordinates**
+[**Non-parametric vs. parametric equations/coordinates**](https://www.mathopenref.com/coordparamcircle.html)
 
 **Using packages that exist to make your life easier, like** [**ggforce**](https://ggforce.data-imaginist.com/reference/index.html)
 
