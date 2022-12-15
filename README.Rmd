@@ -25,7 +25,7 @@ This repository contains supplemental resources and materials that coincide with
 
 The slides for this workshop can be viewed [here](https://meghansaha.github.io/collages_and_patterns/).
 
-It is expected that this presentation will be recorded and available on YouTube at a later date. The link will be placed here when the recording is complete and ready.
+The recorded presentation for this workshop can be viewed [here](https://www.youtube.com/watch?v=hc7VaKRcrcY)
 
 ## Live Coding Example
 

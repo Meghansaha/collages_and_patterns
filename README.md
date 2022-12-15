@@ -23,9 +23,8 @@ data required for generative art.
 The slides for this workshop can be viewed
 [here](https://meghansaha.github.io/collages_and_patterns/).
 
-It is expected that this presentation will be recorded and available on
-YouTube at a later date. The link will be placed here when the recording
-is complete and ready.
+The recorded presentation for this workshop can be viewed
+[here](https://www.youtube.com/watch?v=hc7VaKRcrcY)
 
 ## Live Coding Example
 
@@ -34,27 +33,26 @@ be linked and placed here when annotated and ready.
 
 ## More Rtistry Resources
 
--   Blog Post: [“Thinking Outside the Grid - A “bare bones” intro to
-    Rtistry concepts in R using
-    ggplot.”](https://www.thetidytrekker.com/post/thinking-outside-the-grid)
+- Blog Post: [“Thinking Outside the Grid - A “bare bones” intro to
+  Rtistry concepts in R using
+  ggplot.”](https://www.thetidytrekker.com/post/thinking-outside-the-grid)
 
--   Presentation Recording: [“Intro to Rtistry Using ggplot2 in
-    R”](https://lnkd.in/gDcQTK5d)
+- Presentation Recording: [“Intro to Rtistry Using ggplot2 in
+  R”](https://lnkd.in/gDcQTK5d)
 
--   Presentation Slides: [“Intro to Rtistry Using ggplot2 in
-    R”](https://lnkd.in/ghGDreS8)
+- Presentation Slides: [“Intro to Rtistry Using ggplot2 in
+  R”](https://lnkd.in/ghGDreS8)
 
--   Example Code: [“Bars
-    Example”](https://github.com/Meghansaha/Functions_in_Rtistry/blob/master/scripts/bars_example.R) -
-    (An example on using Purrr functions for Rtistry)
+- Example Code: [“Bars
+  Example”](https://github.com/Meghansaha/Functions_in_Rtistry/blob/master/scripts/bars_example.R) -
+  (An example on using Purrr functions for Rtistry)
 
--   Rtistry Presentation Repository: “[Functions in
-    Rtistry](https://github.com/Meghansaha/Functions_in_Rtistry)”
+- Rtistry Presentation Repository: “[Functions in
+  Rtistry](https://github.com/Meghansaha/Functions_in_Rtistry)”
 
--   “[Anatomy of Generative
-    Art](https://github.com/Ijeamakaanyene/anatomy_of_generative_art)”
-    Talk and Repository- [Ijemaka
-    Anyene](https://ijeamaka.art/portfolio/)
+- “[Anatomy of Generative
+  Art](https://github.com/Ijeamakaanyene/anatomy_of_generative_art)”
+  Talk and Repository- [Ijemaka Anyene](https://ijeamaka.art/portfolio/)
 
--   “[Art From Code](https://art-from-code.netlify.app/)” Workshop
-    Materials - [Danielle Navarro](https://djnavarro.net/)
+- “[Art From Code](https://art-from-code.netlify.app/)” Workshop
+  Materials - [Danielle Navarro](https://djnavarro.net/)
