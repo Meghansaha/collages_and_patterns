@@ -28,8 +28,10 @@ The recorded presentation for this workshop can be viewed
 
 ## Live Coding Example
 
-Any pieces made during a live code at the end of the presentation will
-be linked and placed here when annotated and ready.
+![](images/image.png)
+
+<br>
+You can view the code for the example (as pictured above) that was created live during this talk [here](https://github.com/Meghansaha/collages_and_patterns/blob/master/example_scripts/05_live_code.R).
 
 ## More Rtistry Resources
 
