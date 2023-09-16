@@ -30,8 +30,9 @@ The recorded presentation for this workshop can be viewed
 
 ![](images/image.png)
 
+You can view the code for the example (as pictured above) that was created live during this talk [here](https://github.com/Meghansaha/collages_and_patterns/blob/master/example_scripts/05_live_code.R) 
+
 <br>
-You can view the code for the example (as pictured above) that was created live during this talk [here](https://github.com/Meghansaha/collages_and_patterns/blob/master/example_scripts/05_live_code.R).
 
 ## More Rtistry Resources
 
